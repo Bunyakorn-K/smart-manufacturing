@@ -71,7 +71,7 @@ def render_custom_metric(title, value):
 # ----------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv('app/smart_manufacturing_data.csv')
+    df = pd.read_csv('smart_manufacturing_data.csv')
     if 'timestamp' in df.columns:
         df = df.sort_values(by=['machine_id', 'timestamp']).reset_index(drop=True)
     return df
